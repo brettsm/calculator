@@ -28,7 +28,7 @@ function updateCalcDisplay(buttonPressed) {
     let displayDiv = document.querySelector('.calc-display');
     let para = document.createElement('p');
     let node;
-    switch(buttonPressed) {
+    switch(buttonPressed) {     //TODO: condense this into three different cases, is num, is op, is equals;
         case '0':
             displayContent += '0';
             enteredNum += '0';
@@ -143,6 +143,36 @@ function updateCalcDisplay(buttonPressed) {
             break;
     }
 }
+
+const zeroButton = document.getElementById('zero');
+zeroButton.addEventListener('click', updateCalcDisplay('0'));
+
+const oneButton = document.getElementById('one');
+oneButton.addEventListener('click', updateCalcDisplay('1'));
+
+const twoButton = document.getElementById('two');
+twoButton.addEventListener('click', updateCalcDisplay('2'));
+
+const threeButton = document.getElementById('three');
+threeButton.addEventListener('click', updateCalcDisplay('3'));
+
+const fourButton = document.getElementById('four');
+fourButton.addEventListener('click', updateCalcDisplay('4'));
+
+const fiveButton = document.getElementById('five');
+fiveButton.addEventListener('click', updateCalcDisplay('5'));
+
+const sixButton = document.getElementById('six');
+sixButton.addEventListener('click', updateCalcDisplay('6'));
+
+const sevenButton = document.getElementById('seven');
+sevenButton.addEventListener('click', updateCalcDisplay('7'));
+
+const eightButton = document.getElementById('eight');
+eightButton.addEventListener('click', updateCalcDisplay('8'));
+
+const nineButton = document.getElementById('nine');
+nineButton.addEventListener('click', updateCalcDisplay('9'));
 
 let operand1, operand2, operator;
 let displayContent = '';
