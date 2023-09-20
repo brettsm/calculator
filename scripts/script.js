@@ -144,6 +144,11 @@ function updateCalcDisplay(buttonPressed) {
     }
 }
 
+let operand1, operand2, operator;
+let displayContent = '';
+let enteredNum = '';
+let previousAnswer = '';
+
 const zeroButton = document.getElementById('zero');
 zeroButton.addEventListener('click', updateCalcDisplay('0'));
 
@@ -174,8 +179,5 @@ eightButton.addEventListener('click', updateCalcDisplay('8'));
 const nineButton = document.getElementById('nine');
 nineButton.addEventListener('click', updateCalcDisplay('9'));
 
-let operand1, operand2, operator;
-let displayContent = '';
-let enteredNum = '';
-let previousAnswer = '';
+
 
