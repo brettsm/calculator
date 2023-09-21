@@ -4,7 +4,7 @@ body {
     align-items: center;
 }
 
-.calc-wrapper, .calc-display {
+.calc-wrapper {
     border-radius: 45px;
     border: 1px solid black;
 }
@@ -46,6 +46,12 @@ li button {
     background-color: lightcyan;
     flex-basis: 150px;
     margin: 10px;
+    font-size: 24px;
+    text-align: right;
+    line-height: 75px;
+    border-radius: 25px;
+    padding: 10px; 
+    border: 1px solid #000; 
 }
 
 .calc-buttons {
