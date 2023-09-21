@@ -54,7 +54,7 @@ function updateCalcDisplay(buttonPressed) {
         case '=':
             operand2 = enteredNum;
             enteredNum = '';
-            previousAnswer = displayContent = document.createTextNode(operate(operand1, operand2, operator));
+            previousAnswer = displayContent = operate(parseFloat(operand1), parseFloat(operand2), operator);
             break;
     }
 
@@ -66,35 +66,11 @@ let displayContent = '';
 let enteredNum = '';
 let previousAnswer = '';
 
-const zeroButton = document.getElementById('zero');             //TODO: FIX WITH DOCUMENT.QUERYSELECTORALL
-zeroButton.addEventListener('click', () => updateCalcDisplay('0'));
-
-const oneButton = document.getElementById('one');
-oneButton.addEventListener('click', () => updateCalcDisplay('1'));
-
-const twoButton = document.getElementById('two');
-twoButton.addEventListener('click', () => updateCalcDisplay('2'));
-
-const threeButton = document.getElementById('three');
-threeButton.addEventListener('click', () => updateCalcDisplay('3'));
-
-const fourButton = document.getElementById('four');
-fourButton.addEventListener('click', () => updateCalcDisplay('4'));
-
-const fiveButton = document.getElementById('five');
-fiveButton.addEventListener('click', () => updateCalcDisplay('5'));
-
-const sixButton = document.getElementById('six');
-sixButton.addEventListener('click', () => updateCalcDisplay('6'));
-
-const sevenButton = document.getElementById('seven');
-sevenButton.addEventListener('click', () => updateCalcDisplay('7'));
-
-const eightButton = document.getElementById('eight');
-eightButton.addEventListener('click', () => updateCalcDisplay('8'));
-
-const nineButton = document.getElementById('nine');
-nineButton.addEventListener('click', () => updateCalcDisplay('9'));
-
+const btns = document.querySelectorAll('.btn');
+btns.forEach(button => {
+    button.addEventListener('click', () => {
+        updateCalcDisplay(button.textContent);
+    })
+});
 
 
