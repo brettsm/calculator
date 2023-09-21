@@ -28,7 +28,7 @@ function updateCalcDisplay(buttonPressed) {
     let displayDiv = document.querySelector('.calc-display');
     let para = document.createElement('p');
     let node;
-    switch(buttonPressed) {     //TODO: condense this into three different cases, is num, is op, is equals;
+    switch(buttonPressed) {
         case '0':
         case '1':
         case '2':
@@ -66,7 +66,7 @@ let displayContent = '';
 let enteredNum = '';
 let previousAnswer = '';
 
-const zeroButton = document.getElementById('zero');
+const zeroButton = document.getElementById('zero');             //TODO: FIX WITH DOCUMENT.QUERYSELECTORALL
 zeroButton.addEventListener('click', () => updateCalcDisplay('0'));
 
 const oneButton = document.getElementById('one');
